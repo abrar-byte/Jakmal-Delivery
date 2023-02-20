@@ -11,3 +11,254 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.checkout {
+  background-color: #FFFAE6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.previous {
+  font-size: 14px;
+  padding-top: -25px;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+/* steps */
+.steps {
+
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  color: #FF8A00;
+
+  top: -0.75rem;
+  position: absolute;
+}
+
+.steps .box {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.steps .number {
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+.steps .value {
+  margin-right: 0.5rem;
+
+}
+
+.steps-icon {
+  margin-right: 0.5rem;
+  font-size: 24px;
+
+}
+
+/* end steps */
+/* grid */
+.grid-card {
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  /* height: 350px; */
+  min-height: 420px;
+
+  display: grid;
+  margin-top: 2rem;
+}
+
+.grid-card .column-left {
+  grid-column: span 4 / span 4;
+}
+
+.grid-card .column-right {
+  grid-column: span 2 / span 2;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top-color: #FF8A00;
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+
+/* end grid */
+
+/* delivery */
+.delivery-title {
+  display: grid;
+  justify-items: start;
+  gap:1rem;
+}
+
+.delivery-grid {
+  gap: 3rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: grid;
+  margin-top: 2rem;
+}
+
+.delivery-grid .column-1 {
+  grid-column: span 3 / span 3;
+}
+
+.delivery-grid .column-2 {
+  grid-column: span 2 / span 2;
+}
+
+/* end delivery */
+
+/* summary */
+.summary {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+.summary .title{
+  color:#FF8A00;
+}
+.summary .subtitle{
+  color:#6c757d;
+  font-size: 12px;
+}
+
+.summary .border{
+  border:1px solid #6c757d;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  max-width: 70px;
+
+}
+.summary .estimate{
+  color: #3ADE8D;
+  font-size: 14px;
+  font-weight:500;
+  margin-top: 5px;
+}
+.summary .grow{
+  flex-grow: 1;
+  margin-bottom: 100px;
+}
+.summary .datas{
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 1rem;
+} 
+.summary .datas .name{
+  color:#6c757d;
+  font-size: 12px;
+}
+.summary .datas .value{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.summary .datas .name-total{
+color:#FF8A00;
+font-weight: bold;
+
+font-size: 16px;
+}
+.summary .datas .value-total{
+  color:#FF8A00;
+  font-weight: bold;
+  
+  font-size: 16px;
+}
+/* end summary */
+
+/* payment */
+.payment-grid {
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: grid;
+  margin-top: 2rem;
+}
+
+.payment-grid .grid {
+  gap: 2px;
+  display: grid;
+  justify-items: start;
+}
+.payment-grid .grid .amount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* end payment */
+
+/* finished */
+.finished{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.finished .grid{
+  display: grid;
+  justify-items: start;
+}
+
+
+/* end finished */
+@media (min-width: 768px) {
+
+  .grid-card {
+    gap: 1rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: grid;
+    margin-top: 2rem;
+
+  }
+  .grid-card .column-right {
+    grid-column: span 2 / span 2;
+    margin-left: 2.5rem;
+    padding-left: 2.5rem;
+    margin-top: 0;
+    padding-top: 0;
+    border-top-color: none;
+    border-top-width: 0;
+    border-top-style: none;
+    border-left-color: #FF8A00;
+    border-left-width: 2px;
+    border-left-style: solid;
+  }
+  
+  .delivery-grid {
+    gap: 3rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    display: grid;
+    margin-top: 2rem;
+  }
+  .summary .grow{
+    flex-grow: 1;
+  }
+  .delivery-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .payment-grid {
+    gap: 1rem;
+    margin-right: 10rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+    margin-top: 2rem;
+  }
+
+}
